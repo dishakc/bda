@@ -1,0 +1,10 @@
+x<-c(rep(c("Control"),3),rep(c("Ear Removal"),4),rep(c("Fake Ear Removal"),4))
+x
+xfact<-factor(x)
+xfact
+table(xfact)
+
+str<-c(rep("a",25),rep("b",15),rep("c",58))
+str
+length(str)
+table(str)

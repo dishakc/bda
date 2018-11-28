@@ -1,0 +1,53 @@
+#a
+#1 
+n <- as.integer(readline("Enter no. of employees : "))
+
+#2
+emp_id <- vector(mode = "character")
+emp_name <- vector(mode = "character")
+emp_doj <- vector(mode = "character")
+emp_code <- vector(mode = "numeric")
+emp_dept <- vector(mode = "character")
+emp_desig <- vector(mode = "character")
+
+#3
+for(i in 1:n) {
+  emp_id[i] <- as.character(readline("Enter the employee ID : "))
+  emp_name[i] <- as.character(readline("Enter the employee name : "))
+  emp_doj[i] <- as.character(readline("Enter the employee date of joining : "))
+  emp_code[i] <- as.numeric(readline("Enter the employee code : "))
+  emp_dept[i] <- as.character(readline("Enter the employee department : "))
+  emp_desig[i] <- as.character(readline("Enter the employee designation : "))
+}
+
+
+#b
+#4
+employees <- data.frame(emp_id, emp_name, emp_doj, emp_code, emp_dept, emp_desig)
+
+
+#c
+#5
+write.csv(employees, file = "employees.csv")
+
+
+#d
+#6 
+write.csv2(employees, file = "employees2.csv")
+# The diff is that the field seperator is semi-colon(;) for CSV2, while it is comma(,) for CSV
+
+
+#e
+#7
+csv_emps <- read.csv("employees.csv")
+print(csv_emps)
+
+
+#f
+#8
+new_emp <- data.frame("4", "E004", "Tom", "01/01/2014", 5555, "IT", "Network Engg.")
+write.table(new_emp, "employees.csv", append = TRUE, row.names = FALSE, col.names = FALSE, sep = ",")
+
+#9
+csv_emps <- read.csv("employees.csv")
+print(csv_emps)

@@ -1,0 +1,29 @@
+abstract class Notification
+
+case class Email(sender:String, subject: String, body: String) extends Notification
+
+case class SMS(number:String, message:String) extends Notification 
+
+object NotificationMatch 
+{
+    def showNotification(notification: Notification) : String = 
+    {
+        notification match 
+        {
+            case Email(sender, subject, body) => 
+                s"You got an email from $sender with subject $subject."
+            case SMS(number, message) => 
+                s"You got a SMS from $number with message as $message."
+        } 
+    }
+
+    def main(argr: Array[String]) 
+    {
+        val testOne = Email("xyz@gmail", "Hello!", "Hello World!")
+        val testTwo = SMS("9998887776", "Hi!")
+
+        println(showNotification(testOne))
+        println(showNotification(testTwo))
+    }
+}
+

@@ -1,0 +1,16 @@
+object MinMax {
+	def minmax(values:Array[Int]):(Int, Int) = 
+	{
+		return (values.max, values.min)
+	}
+	def main(args: Array[String]): Unit = 
+	{
+		var arr =Array(1,6,8,23,56,2,59)
+		val result = minmax(arr)
+		printf("Array Values")
+		for(i<-arr)
+			println(i)
+		println("The max element is : "+result._1)
+		println("The min element is : "+result._2)
+	}
+}

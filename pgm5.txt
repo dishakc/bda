@@ -1,0 +1,30 @@
+#a
+data()
+
+#b
+data(mtcars)
+nRows <- nrow(mtcars)
+nCols <- ncol(mtcars)
+nRows
+nCols
+
+#c
+auto <- subset(mtcars, am==0)
+manual<- subset(mtcars, am==1)
+if(nrow(auto) > nrow(manual)) print("There are more automatic cars.") else print("There are more manual cars.")
+
+#d
+mcars <- data.frame(mtcars)
+horsePower <- mcars[,4]
+weight <- mcars[,6]
+scatter.smooth(horsePower, weight)
+
+#e
+mcars[,2] <- as.integer(mcars[,2])
+mcars[,8] <- as.integer(mcars[,8])
+mcars[,9] <- as.integer(mcars[,9])
+newmtc <- mcars
+newmtc
+
+#f
+subset(mtcars, cyl<5)

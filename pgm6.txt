@@ -1,0 +1,18 @@
+#a
+dim(airquality)
+
+#b
+sapply(airquality, class)
+
+#c
+colSums(is.na(airquality))
+
+#d
+df=airquality
+for(i in 1:4)
+  df[,i]= ifelse ( is.na(df[,i]), mean(df[,i], na.rm = TRUE), df[,i])
+df
+
+#e
+na.exclude(airquality)
+

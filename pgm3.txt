@@ -1,0 +1,24 @@
+# a
+# Creating three vectors
+usn <- c("001", "002", "003")
+name <- c("Sam", "Tom", "Ram")
+marks <- c(26, 18, 20)
+
+# Creating the dataframe
+student <- data.frame(usn, name, marks)
+print(student)
+
+# b
+# Creating new vector to add
+age <- c(19, 22, 21)
+
+# Adding to the student dataframe
+student <- data.frame(usn, name, marks,age)
+student
+
+# Printing summary of dataframe
+summary(student)
+
+# c
+# age < 20 and marks > 25
+subset(student, age<20 & marks>25)

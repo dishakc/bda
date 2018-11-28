@@ -1,0 +1,10 @@
+name := "    "
+
+version := "1.0"
+
+scalaVersion := "   "
+	
+libraryDependencies += "org.apache.spark" %% "spark-core" % "    "
+libraryDependencies += "org.apache.spark" %% "spark-sql" % "     "
+libraryDependencies += "org.apache.spark" %% "spark-streaming" % "     "
+
